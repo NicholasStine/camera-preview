@@ -418,7 +418,7 @@ extension CameraController {
         let identifier = UUID()
         let randomIdentifier = identifier.uuidString.replacingOccurrences(of: "-", with: "")
         let finalIdentifier = String(randomIdentifier.prefix(8))
-        let fileName="cpcp_video_"+finalIdentifier+".mp4"
+        let fileName="cpcp_video_"+finalIdentifier+".mov"
 
         let fileUrl = path.appendingPathComponent(fileName)
         try? FileManager.default.removeItem(at: fileUrl)
