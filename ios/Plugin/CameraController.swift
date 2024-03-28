@@ -62,7 +62,8 @@ extension CameraController {
                     self.rearCamera = camera
 
                     try camera.lockForConfiguration()
-                    camera.focusMode = .continuousAutoFocus
+                    camera.focusMode = .locked
+                    try camera.setFocusModeLocked(lensPosition: 0.8, completionHandler: nil)
                     camera.unlockForConfiguration()
                 }
             }
